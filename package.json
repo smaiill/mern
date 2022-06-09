@@ -1,0 +1,13 @@
+{
+  "name": "mip",
+  "version": "1.0.0",
+  "repository": "https://github.com/niiyy/mern.git",
+  "author": "niiyy",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  },
+  "scripts": {
+    "format": "prettier --write ."
+  }
+}
