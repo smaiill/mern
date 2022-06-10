@@ -2,11 +2,14 @@
 
 ### ./
 node_modules
+.rest
 
 ### SERVER
 server/yarn-error.log
 server/dist
 server/node_modules
+server/app.logs.log
+server/.env
 
 ### UI
 client/node_modules

@@ -1,1 +1,1 @@
-### My mern starter you can use it for free !
+# My mern starter you can use it for free
