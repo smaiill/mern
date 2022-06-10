@@ -6,24 +6,27 @@ import { Response } from 'express'
 export default class _UserService {
   constructor() {}
 
-  static async register(res: Response,{ username, email, password }: UserAuthRT): Promise<void> {
+  static async register(
+    res: Response,
+    { username, email, password }: UserAuthRT
+  ): Promise<void> {
     try {
-        const user = await UserModel.create({
-            username,
-            email,
-            password
-        })
-        res.statusCode = 200
-        res.send({
-            status: 'ok'
-        })
+      const user = await UserModel.create({
+        username,
+        email,
+        password,
+      })
+      res.statusCode = 200
+      res.send({
+        status: 'ok',
+      })
     } catch (error) {
-        logger.error(`can't create user: ${error}`)
-        res.statusCode = 400
-        res.send({
-            status: 'error',
-            error
-        })
+      logger.error(`can't create user: ${error}`)
+      res.statusCode = 400
+      res.send({
+        status: 'error',
+        error,
+      })
     }
   }
 

@@ -9,7 +9,6 @@ const register = async (req: Request, res: Response, next: NextFunction) => {
     username,
     password,
   })
-
 }
 
 const login = (req: Request, res: Response, next: NextFunction) => {
@@ -19,8 +18,6 @@ const login = (req: Request, res: Response, next: NextFunction) => {
     email,
     password,
   })
- 
-
 }
 
 export { login, register }
