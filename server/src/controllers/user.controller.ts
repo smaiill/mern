@@ -14,7 +14,7 @@ const register = async (req: Request, res: Response, next: NextFunction) => {
 const login = (req: Request, res: Response, next: NextFunction) => {
   const { email, password } = req.body
 
-  UserAuth.login({
+  UserAuth.login(req, res, {
     email,
     password,
   })
