@@ -10,5 +10,7 @@
   "scripts": {
     "format": "prettier --write ."
   },
-  "dependencies": {}
+  "dependencies": {
+    "remove": "^0.1.5"
+  }
 }

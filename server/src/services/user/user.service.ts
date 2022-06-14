@@ -1,7 +1,7 @@
-import UserModel from '../../models/user.model'
+import UserModel from '@models/user.model'
 import { UserAuthRT, UserAuthLT } from 'typings/user.types'
-import { logger } from '../../utils/logger'
-import { Request, request, Response } from 'express'
+import { logger } from '@utils/logger'
+import { Request, Response } from 'express'
 import _AuthService from '../auth/auth.service'
 
 export default class _UserService {

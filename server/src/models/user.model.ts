@@ -1,4 +1,4 @@
-import _PasswordService from '../services/misc/password.service'
+import _PasswordService from '@services/misc/password.service'
 import isEmail from 'validator/lib/isEmail'
 import { model, Schema } from 'mongoose'
 

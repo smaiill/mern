@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response, Router } from 'express'
-import * as userController from '../controllers/user.controller'
+import * as userController from '@controllers/user.controller'
 
 const router = Router()
 

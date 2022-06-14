@@ -1,3 +1,4 @@
+import './paths'
 import express, { Application, Request, Response } from 'express'
 import usersRoutes from './routes/users.routes'
 import cookieParser from 'cookie-parser'

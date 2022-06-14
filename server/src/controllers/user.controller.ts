@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from 'express'
-import UserAuth from '../services/user/user.service'
+import UserAuth from '@services/user/user.service'
 
 const register = async (req: Request, res: Response, next: NextFunction) => {
   const { username, email, password } = req.body

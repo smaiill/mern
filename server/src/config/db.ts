@@ -1,5 +1,5 @@
 import db from 'mongoose'
-import { logger } from '../utils/logger'
+import { logger } from '@utils/logger'
 
 db.connect(process.env.DB_URL as string, {})
   .then(({ connections }) =>

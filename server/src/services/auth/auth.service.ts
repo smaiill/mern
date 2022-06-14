@@ -1,6 +1,6 @@
 import _PasswordService from '../misc/password.service'
-import userModel from '../../models/user.model'
-import { JWTPayload } from '../../typings/auth.types'
+import userModel from '@models/user.model'
+import { JWTPayload } from 'typings/auth.types'
 import JWT from 'jsonwebtoken'
 
 const TOKEN_MAX_AGE = 3 * 24 * 60 * 60 * 500 // 1.5 day.
