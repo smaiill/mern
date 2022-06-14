@@ -9,7 +9,6 @@ export default class _AuthService {
   constructor() {}
 
   static async createToken(payload: JWTPayload) {
-    console.log(payload._id)
     const token = await JWT.sign(
       { payload },
       process.env.SECRET_KEY as string,
