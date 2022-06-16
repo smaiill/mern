@@ -1,16 +1,13 @@
 import axios from 'axios'
-import { createContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Home from './components/views/Home'
+import uidContext from './components/contexts/uidContext'
 
 function App() {
-
-  const UidContext = createContext(null)
   const [uid, setUid] = useState(null)
-
 
   useEffect(() => {
     const fetchToken = async () => {
-
       await axios({
         method: 'post',
         url: `http://localhost:5000/api/users/jwtid`,
@@ -19,17 +16,16 @@ function App() {
         .then((res) => {
           setUid(res.data)
         })
-        .catch((err) => console.log(err))
+        .catch((err) => console.error(err))
     }
     fetchToken()
   }, [])
 
-
   return (
     <div className="App">
-      <UidContext.Provider value = {uid}>
+      <uidContext.Provider value={uid}>
         <Home />
-      </UidContext.Provider>
+      </uidContext.Provider>
     </div>
   )
 }

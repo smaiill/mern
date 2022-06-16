@@ -1,21 +1,13 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import Login from '../login/Login'
-import Register from '../register/Register'
+import React, { useContext } from 'react'
+import uidContext from '../contexts/uidContext'
 
-const Home = () => {
-  const [login, setLogin] = useState(false)
-
-  const handleClick = () => {
-    setLogin(!login)
-  }
+const Home: React.FC = () => {
+  const uid = useContext<string | null>(uidContext)
 
   return (
     <div>
-      <button onClick={handleClick}>
-        <h1>Change</h1>
-      </button>
-      {login ? <Login /> : <Register />}
+      <h1>Hello world.</h1>
+      {uid ? <h1>Connected !</h1> : <h1>Not conneted !</h1>}
     </div>
   )
 }

@@ -20,10 +20,9 @@ export default class _AuthService {
     return token
   }
 
-  
   static validateToken(token: string | null): Promise<any> {
     return new Promise((resolve, reject) => {
-      if(!token) return reject('NO TOKEN')
+      if (!token) return reject('NO TOKEN')
       JWT.verify(
         token,
         process.env.SECRET_KEY as string,

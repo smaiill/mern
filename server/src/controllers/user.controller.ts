@@ -1,10 +1,10 @@
 import { NextFunction, Request, Response } from 'express'
-import UserAuth from '@services/user/user.service'
+import _UserService from '@services/user/user.service'
 
 const register = async (req: Request, res: Response, next: NextFunction) => {
   const { username, email, password } = req.body
 
-  await UserAuth.register(res, {
+  await _UserService.register(res, {
     email,
     username,
     password,
@@ -14,7 +14,7 @@ const register = async (req: Request, res: Response, next: NextFunction) => {
 const login = (req: Request, res: Response, next: NextFunction) => {
   const { email, password } = req.body
 
-  UserAuth.login(req, res, {
+  _UserService.login(req, res, {
     email,
     password,
   })
