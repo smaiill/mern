@@ -6,5 +6,3 @@ import './config/db'
 app.listen(process.env.PORT ?? 8080, () =>
   logger.info(`Started application on port: ${process.env.PORT ?? 8080}`)
 )
-
-console.log(__dirname)
